@@ -1,23 +1,30 @@
 <section id="Overview">
   <div class="p">
-    Nix 
-
-    Get to know nix as a user (~system admin), package developer,
-    and/or distribution maintianer. It's a relatively lightweight,
-    accessible, and quite elegant.
+    Nix is a relatively lightweight, portable, and elegant package
+    management system. 'Nix' may also refer to the functional language
+    used to describe packages. Here, we provide an overview for both
+    sufficient to get one started using nix to develop 'micro
+    distributions' for use in development and production environments.
+  </div>
+  <div class="p">
+    The primer is organized into a series of 'trails'. The trails are
+    largely independent, though later trails may build on the general
+    knowledge discussed in and make the occasional reference to
+    previous trails.
   </div>
 </section>
-<section id="Why-Nix">
+<section id="Trails">
   <div class="p">
     <ul>
       <li>
-	<em><a href="/documentation/nix/Micro-Distributions">Micro
-        Distributions</a></em>: The portability and relative light
-        footprint of nix make it ideal for 'micro distributions'.
+	<em><a href="/documentaiton/nix/Micro-Distributions">Micro-Distributions</a></em>:
+	Walk through the "how" of building a simple
+	'micro-distribution' to better understand the "why" of nix.
       </li>
       <li>
-        <em><a href="/documentation/nix/Key-Features">Key Features</a></em>: 
-        Regardless of the your role, nix is a about as easy
+        <em><a href="/documentation/nix/Key-Features">Key
+	Features</a></em>: A quick demonstration of the key features
+	of the nix package management system.
       </li>
     </ul>
   </div>
