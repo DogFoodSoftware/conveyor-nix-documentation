@@ -17,14 +17,33 @@
   <div class="p">
     <ul>
       <li>
-	<em><a href="/documentaiton/nix/Micro-Distributions">Micro-Distributions</a></em>:
+	<em><a href="/documentaiton/nix-primer/Micro-Distributions">Micro-Distributions</a></em>:
 	Walk through the "how" of building a simple
 	'micro-distribution' to better understand the "why" of nix.
       </li>
       <li>
-        <em><a href="/documentation/nix/Key-Features">Key
+        <em><a href="/documentation/nix-primer/Key-Features">Key
 	Features</a></em>: A quick demonstration of the key features
 	of the nix package management system.
+      </li>
+      <li>
+	<em><a href="/documentation/nix-primer/Building-Packages">Building
+	Packages</a></em>: Walk through using nix-expressions to build
+	packages.
+      </li>
+      <li>
+	<em><a href="/documentation/nix-primer/Gotchas-and-Oddities">Gotchas
+	and Oddities</a></em>: Despite the overall elegance, the nix
+	language has it's warts.
+      </li>
+      <li>
+	<em><a href="/documentation/nix-primer/Development-Integeration">Development
+	Integration</a></em>: Patterns to integrate nix with
+	development.
+      </li>
+      <li>
+	<em><a href="/documentation/nix-primer/Basic-Admin">Basic
+	Admin</a></em>: Run through basic nix administration.
       </li>
     </ul>
   </div>
