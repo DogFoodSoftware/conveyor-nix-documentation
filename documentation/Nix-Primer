@@ -1,0 +1,24 @@
+<section id="Overview">
+  <div class="p">
+    Nix 
+
+    Get to know nix as a user (~system admin), package developer,
+    and/or distribution maintianer. It's a relatively lightweight,
+    accessible, and quite elegant.
+  </div>
+</section>
+<section id="Why-Nix">
+  <div class="p">
+    <ul>
+      <li>
+	<em><a href="/documentation/nix/Micro-Distributions">Micro
+        Distributions</a></em>: The portability and relative light
+        footprint of nix make it ideal for 'micro distributions'.
+      </li>
+      <li>
+        <em><a href="/documentation/nix/Key-Features">Key Features</a></em>: 
+        Regardless of the your role, nix is a about as easy
+      </li>
+    </ul>
+  </div>
+</section>
