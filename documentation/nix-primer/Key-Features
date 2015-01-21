@@ -1,0 +1,50 @@
+<div data-default-section-audience="sysadmin sysengineer"
+     class="page-header">Key Features</div>
+<section data-audience="all" id="Overview">
+  <div class="p">
+    Here we discuss some of the key features, as we see them of
+    nix. The primary point of view is that of a system administrator
+    or system engineer.
+  </div>
+</section>
+<section id="Safe-Host-Repurposing">
+  <h1>Safe Host Repurposing</h1>
+  <div class="p">
+    <em>Scenario</em>: You have VM hosts cycling through duties and
+    you want to be able to take the warm VMs going off duty for one
+    task to be repurposed for another.
+  </div>
+  <div class="p">
+    <em>Possible Solution</em>: Define your deploy (or at least the
+    system setup / package bits) in nix expressions. Because nix's
+    build is atomic and lazy, you'll be able to deploy the expression
+    for each ask to any machine, safely, without worrying over much
+    about what's already installed on the machine.
+  </div>
+  <div class="p" data-detail="detailed">
+    In appropriate environments, the cost would be never worse than
+    deploying from a cold image, and in most cases will incur little
+    if any setup at all, while everything in between is handled
+    gracefully.
+  </div>
+  <div class="p" data-detail="detailed">
+    Also, you could (relatively) easily support 'cycle' vs 'duty'
+    optimized VMs. The former would not delete previous install
+    generations nor gc the store, and thus be able to move between
+    tasks more quickly, even building up improved ability to do so as
+    time goes on. A duty optimized VM, on the other hand would be more
+    agressive about cleaning generations. Ahh... Actually, you just do
+    this lazilzy, discarding generations to free up disk space as
+    required. If you wanted to get even fancier, you could even work
+    up a pretty simple 'distance graph' based on dry runs to optimize
+    cycling.
+  </div>
+  <div class="p" data-detail="detailed">
+    With nix's immutable, functional build, it's no problem to have
+    multiple versions of the same code running. At least so long as
+    you handle any data issues yourself.
+  </div>
+  <div class="p">
+    
+  </div>
+</section>
