@@ -28,23 +28,17 @@
     gracefully.
   </div>
   <div class="p" data-detail="detailed">
-    Also, you could (relatively) easily support 'cycle' vs 'duty'
-    optimized VMs. The former would not delete previous install
-    generations nor gc the store, and thus be able to move between
-    tasks more quickly, even building up improved ability to do so as
-    time goes on. A duty optimized VM, on the other hand would be more
-    agressive about cleaning generations. Ahh... Actually, you just do
-    this lazilzy, discarding generations to free up disk space as
-    required. If you wanted to get even fancier, you could even work
-    up a pretty simple 'distance graph' based on dry runs to optimize
-    cycling.
-  </div>
-  <div class="p" data-detail="detailed">
-    With nix's immutable, functional build, it's no problem to have
-    multiple versions of the same code running. At least so long as
-    you handle any data issues yourself.
+    Actually, if we add a process to clear disk space as needed (while
+    respecting some sensible minimum), then we could let VMs build up
+    history so they can cycle quickly. As they age into a duty,
+    they'll make space as needed. You could do an easy affinity to
+    naturally develop an arguably optimimum number of cycle optimized
+    VMs.
   </div>
   <div class="p">
-    
+    <em>Caveats</em>: Of course, nix doesn't take any note of data. In
+    many cases, it's not in-and-of-itself a complete solution, and
+    this isn't to say that you shouldn't consider some kind of
+    deployment manager.
   </div>
 </section>
