@@ -6,7 +6,7 @@
 <div class="page-header">Nix in Context</div>
 <section id="Overview">
   <div class="p">
-    Nix is a package manager, and it cover those functions
+    Nix is a package manager, and it covers those functions
     well. Because of it's elegant design and relative simplicity, it
     provides features beyond those traditionally offerred.
   </div>

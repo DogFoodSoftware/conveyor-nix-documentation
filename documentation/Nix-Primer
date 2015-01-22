@@ -7,15 +7,14 @@
   <div class="p">
     Nix is a relatively lightweight, portable, and elegant package
     management system. 'Nix' may also refer to the functional language
-    used to describe packages. Here, we provide an overview for both
+    used to describe packages. Here, we provide an overview of both
     sufficient to get one started using nix to develop 'micro
     distributions' for use in development and production environments.
   </div>
   <div class="p">
-    The primer is organized into a series of 'trails'. The trails are
-    largely independent, though later trails may build on the general
-    knowledge discussed in and make the occasional reference to
-    previous trails.
+    The primer is organized into a series of topics. The series is
+    ordered for the benefit of those new to nix. Each topic is
+    designed as an elementary reference as well.
   </div>
 </section>
 <section id="Trails">
