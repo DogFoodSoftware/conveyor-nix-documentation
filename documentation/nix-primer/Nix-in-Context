@@ -1,0 +1,41 @@
+<ol class="breadcrumb">
+  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+  <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
+  <li class="active">Nix in Context</li>
+</ol>
+<div class="page-header">Nix in Context</div>
+<section id="Overview">
+  <div class="p">
+    Nix is a package manager, and it cover those functions
+    well. Because of it's elegant design and relative simplicity, it
+    provides features beyond those traditionally offerred.
+  </div>
+  <h2>Pros</h2>
+  <ul class="p">
+    <li>Nix plays nice with other package managers.</li>
+    <li>Nix provides natural user space package management.</li>
+    <li>Nix can often be integrated iteratively with no adverse
+      effects on current operations.</li>
+    <li>Effective usage can lead to significant operational advantages
+      in many environments.</li>
+    <li>Nix can serve as, at least in part, as a 'compatibility'
+      layer, especially on *nixes.</li>
+  </ul>
+
+  <h2>Cons</h2>
+  <ul class="p">
+    <li>The nix disto and nixpkgs in particular are still somewhat
+      unstable and may be too immature for enterprise
+      systems.<span data-detail="detailed"> Be prepared to mess around
+      with derivative systems as the core distro moves. While this can
+      be overcome by extending and overriding, that's a pain.</span>
+    </li>
+    <li>For this reason, it's often the case that you end up using nix
+      with another distro / packagemanager, and thus deepen the stack.
+  </ul>
+</section>
+<ol class="breadcrumb">
+  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+  <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
+  <li class="active">Nix in Context</li>
+</ol>

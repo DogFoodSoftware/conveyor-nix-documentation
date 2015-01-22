@@ -1,3 +1,7 @@
+<ol class="breadcrumb">
+  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+  <li class="active">Nix Primer</li>
+</ol>
 <div class="page-header">Nix Primer</div>
 <section id="Overview">
   <div class="p">
@@ -19,11 +23,11 @@
   <div class="p">
     <ul>
       <li>
-	<em><a href="/documentaiton/nix-primer/Nix-in-Context">Nix in Context</a></em>:
+	<em><a href="/documentation/nix-primer/Nix-in-Context">Nix in Context</a></em>:
 	A high level look at how nix fits in the stack.
       </li>
       <li>
-	<em><a href="/documentaiton/nix-primer/Micro-Distributions">Micro-Distributions</a></em>:
+	<em><a href="/documentation/nix-primer/Micro-Distributions">Micro-Distributions</a></em>:
 	Walk through the "how" of building a simple
 	'micro-distribution' to better understand the "why" of nix.
       </li>
@@ -54,3 +58,7 @@
     </ul>
   </div>
 </section>
+<ol class="breadcrumb">
+  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+  <li class="active">Nix Primer</li>
+</ol>

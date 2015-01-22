@@ -1,3 +1,8 @@
+<ol class="breadcrumb">
+  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+  <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
+  <li class="active">Key Features</li>
+</ol>
 <div data-default-section-audience="sysadmin sysengineer"
      class="page-header">Key Features</div>
 <section data-audience="all" id="Overview">
@@ -37,8 +42,16 @@
   </div>
   <div class="p">
     <em>Caveats</em>: Of course, nix doesn't take any note of data. In
-    many cases, it's not in-and-of-itself a complete solution, and
-    this isn't to say that you shouldn't consider some kind of
-    deployment manager.
+    many cases, it's not in-and-of-itself a complete
+    solution.<span data-detail="detailed"> If you use a build manager,
+    such as Puppet or Chef, nix is not generally a replacement for
+    these systems, though it can take—and we think better share—some
+    of the responsibility that would otherwise be handled by the
+    provisioning systems proper.</span>
   </div>
 </section>
+<ol class="breadcrumb">
+  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+  <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
+  <li class="active">Key Features</li>
+</ol>
