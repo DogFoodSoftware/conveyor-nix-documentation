@@ -13,8 +13,8 @@
 	<h2>Nix is a package manager.</h2>
 	<ul class="p">
 	  <li>It does all the stuff other package managers do.</li>
-	  <li>Functionally, it builds from source.</li>
-	  <li>In practice, it makes use of binary caches.</li>
+	  <li>Can use source and binaries interchangebly.</li>
+	  <li>Completely and naturally solves depedency hell.</li>
 	</ul>
       </li>
       <li>

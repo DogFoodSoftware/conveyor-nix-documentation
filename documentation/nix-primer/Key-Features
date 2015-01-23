@@ -1,64 +1,74 @@
-<ol class="breadcrumb">
-  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-  <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
-  <li class="active">Key Features</li>
-</ol>
-<div data-default-section-audience="sysadmin sysengineer"
-     class="page-header">Key Features</div>
-<section data-audience="all" id="Overview">
-
-
-	<h2>Dependency hell becomes a non-issue.</h2>
-	<ul>
-	  <li>Natuarlly handles multiple and incompatible version
-	  combinations.</li>
-
+<nav>
+  <ol class="breadcrumb">
+    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+    <li><a href="/documentation/Nix-Recipes">Nix Cookbook</a></li>
+    <li class="active">Optimal Host Repurposing</li>
+  </ol>
+</nav>
+<div class="page-header">Optimal Host Repurposing</div>
+<section id="Scenario">
+  <h1>Scenario</h1>
   <div class="p">
-    Here we discuss some of the key features, as we see them of
-    nix. The primary point of view is that of a system administrator
-    or system engineer.
+    You have VM hosts cycling through duties and you want to be able
+    to take the warm VMs going off duty for one task to be quickly
+    repurposed for another.
+  </div>
+  <div class="p">
+    The atomicity, static link, and lazy builds allow us to provision
+    software without regard to what else in installed the machine. So
+    long as we're only adding well behaved packages, there's no need
+    to worry about stepping on toes. A given package can neither break
+    nor be broken by any other.
+  </div>
+  <div class="p">
+    This fact allows us to set up a situation in which virtual hosts
+    may be safely repurposed, allow us to use warm hosts
+    efficiently. Assuming the rest of the provisioning process plays
+    nice, there's no need to rebuild core systems from scratch except
+    in very specific cases.
+  </div>
+  <div class="p">
+    The more there's a need for hosts in many roles, and the more
+    dynamic those demands are, the more useful this functionality
+    is. If your host functionality is limited and a single uniform
+    host configuration sufficies, then there's no space to gain on
+    this front.
   </div>
 </section>
-<section id="Safe-Host-Repurposing">
-  <h1>Safe Host Repurposing</h1>
+<section id="Iterative-Steps">
+  <h1>Iterative Steps</h1>
   <div class="p">
-    <em>Scenario</em>: You have VM hosts cycling through duties and
-    you want to be able to take the warm VMs going off duty for one
-    task to be repurposed for another.
-  </div>
-  <div class="p">
-    <em>Possible Solution</em>: Define your deploy (or at least the
-    system setup / package bits) in nix expressions. Because nix's
-    build is atomic and lazy, you'll be able to deploy the expression
-    for each ask to any machine, safely, without worrying over much
-    about what's already installed on the machine.
-  </div>
-  <div class="p" data-detail="detailed">
-    In appropriate environments, the cost would be never worse than
-    deploying from a cold image, and in most cases will incur little
-    if any setup at all, while everything in between is handled
-    gracefully.
-  </div>
-  <div class="p" data-detail="detailed">
-    Actually, if we add a process to clear disk space as needed (while
-    respecting some sensible minimum), then we could let VMs build up
-    history so they can cycle quickly. As they age into a duty,
-    they'll make space as needed. You could do an easy affinity to
-    naturally develop an arguably optimimum number of cycle optimized
-    VMs.
+    <em>First</em>: Use one or more 'micro-distribution' to define the
+    universe of potential packages for all host configurations in the
+    universe of discourse.
   </div>
   <div class="p">
-    <em>Caveats</em>: Of course, nix doesn't take any note of data. In
-    many cases, it's not in-and-of-itself a complete
-    solution.<span data-detail="detailed"> If you use a build manager,
-    such as Puppet or Chef, nix is not generally a replacement for
-    these systems, though it can take—and we think better share—some
-    of the responsibility that would otherwise be handled by the
-    provisioning systems proper.</span>
+    <em>Second</em>: At some point, unused packages need to be
+    cleared. However, we want to let the packages use more or less as
+    much space as we can. In other words, let it fill any available
+    space, and then trim as necessary.
+  </div>
+  <div class="p">
+    Luckily, nix's management of 'generations' does exactly what we
+    need. Ideally, this could be a live process that reacts to changes
+    in the free disk space on the volume housing the nix store. An
+    initial implementation could also make strides with a fixed target
+    enforced prior to reacquisition.
+  </div>
+</section>
+<section id="Caveats">
+  <h1>Caveats</h1>
+  <div class="p">
+    Nix doesn't take any note of data. In many cases, it's not
+    in-and-of-itself a complete solution.<span data-detail="detailed">
+    If you use a build manager, such as Puppet or Chef, nix is not
+    generally a replacement for these systems, though it can take—and
+    we think better share—some of the responsibility that would
+    otherwise be handled by the provisioning systems proper.</span>
   </div>
 </section>
 <ol class="breadcrumb">
   <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-  <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
-  <li class="active">Key Features</li>
+  <li><a href="/documentation/Nix-Primer">Nix Cookbook</a></li>
+  <li class="active">Optimal Host Repuprosing</li>
 </ol>
