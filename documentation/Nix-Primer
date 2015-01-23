@@ -22,11 +22,6 @@
   <div class="p">
     <ul>
       <li>
-	<em><a href="/documentation/nix-primer/Gotchas-and-Oddities">Gotchas
-	and Oddities</a></em>: Despite the overall elegance, the nix
-	language has it's warts.
-      </li>
-      <li>
 	<em><a href="/documentation/nix-primer/Nix-in-Context">Nix in Context</a></em>:
 	A high level look at how nix fits in the stack.
       </li>
@@ -40,13 +35,13 @@
 	packages.
       </li>
       <li>
+	<em><a href="/documentation/nix-primer/Basic-Admin">Basic
+	Admin</a></em>: Run through basic nix administration.
+      </li>
+      <li>
 	<em><a href="/documentation/nix-primer/Development-Integeration">Development
 	Integration</a></em>: Patterns to integrate nix with
 	development.
-      </li>
-      <li>
-	<em><a href="/documentation/nix-primer/Basic-Admin">Basic
-	Admin</a></em>: Run through basic nix administration.
       </li>
     </ul>
   </div>
