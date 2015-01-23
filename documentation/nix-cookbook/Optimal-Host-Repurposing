@@ -1,7 +1,7 @@
 <nav>
   <ol class="breadcrumb">
     <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-    <li><a href="/documentation/Nix-Recipes">Nix Cookbook</a></li>
+    <li><a href="/documentation/Nix-Cookbook">Nix Cookbook</a></li>
     <li class="active">Optimal Host Repurposing</li>
   </ol>
 </nav>
