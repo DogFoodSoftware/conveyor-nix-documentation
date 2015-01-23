@@ -1,7 +1,9 @@
-<ol class="breadcrumb">
-  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-  <li class="active">Nix Primer</li>
-</ol>
+<nav>
+  <ol class="breadcrumb">
+    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+    <li class="active">Nix Primer</li>
+  </ol>
+</nav>
 <div class="page-header">Nix Primer</div>
 <section id="Overview">
   <div class="p">
@@ -46,7 +48,9 @@
     </ul>
   </div>
 </section>
-<ol class="breadcrumb">
-  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-  <li class="active">Nix Primer</li>
-</ol>
+<nav>
+  <ol class="breadcrumb">
+    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+    <li class="active">Nix Primer</li>
+  </ol>
+</nav>
