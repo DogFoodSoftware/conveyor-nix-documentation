@@ -1,41 +1,70 @@
-<ol class="breadcrumb">
-  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-  <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
-  <li class="active">Nix in Context</li>
-</ol>
+<nav>
+  <ol class="breadcrumb">
+    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+    <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
+    <li class="active">Nix in Context</li>
+  </ol>
+</nav>
 <div class="page-header">Nix in Context</div>
-<section id="Overview">
-  <div class="p">
-    Nix is a package manager, and it covers those functions
-    well. Because of it's elegant design and relative simplicity, it
-    provides features beyond those traditionally offerred.
+<section id="Overview" style="height: 200px;">
+  <div id="slides">
+    <ul class="slides-container">
+      <li>
+	<h2>Nix is a package manager.</h2>
+	<ul class="p">
+	  <li>It does all the stuff other package managers do.</li>
+	  <li>Functionally, it builds from source.</li>
+	  <li>In practice, it makes use of binary caches.</li>
+	</ul>
+      </li>
+      <li>
+	<h2>Nix works in user space.</h2>
+	<ul class="p">
+	  <li>Therefore, nix plays nice with other package managers.</li>
+	  <li>Nix need not replace; it can augment.</li>
+	  <li>Nix can be iteratively integarted.</li>
+	</ul>
+      </li>
+      <li>
+	<h2>Can handle development dependencies.</h2>
+	<ul class="p">
+	  <li>Nix makes a great dependency manager.</li>
+	  <li>Nix can often improve and simplify dependency management
+	    functions in project build tools like Maven, Jenkins and
+	    Gradle.</li>
+	  <li>Nix can provide simple and robust dependency management
+	    for 'pure' build systems like
+	    make. See <a href="/documentation/nix-primer/Use-Cases#Augment-Build-Systems">augmenting
+	    build systems</a>.</li>
+	  <li>Nix can elegantly integrate the development build and
+	    production setup.</li>
+	</ul>
+      </li>
+      <li>
+	<h2>May improve public distribution.</h2>
+	<ul class="p">
+	  <li>Nix channels provide a relatively convenient method of
+	    binary distribution.</li>
+	  <li>Of course, the overhead here is installing a nix base
+	    system, so it's only applicable to large applications.</li>
+	  <li>For more, see <a href="/documentation/nix-primer/Use-Cases#Micro-Distributions">micro-distribution use case.</a></li>
+	</ul>
+      </li>
+    </ul>
+    <nav class="slides-navigation">
+      <a href="#" class="next">
+        <i class="bi-icon bi-icon-chevron-right"></i>
+      </a>
+      <a href="#" class="prev">
+        <i class="bi-icon bi-icon-chevron-left"></i>
+      </a>
+    </nav>
   </div>
-  <h2>Pros</h2>
-  <ul class="p">
-    <li>Nix plays nice with other package managers.</li>
-    <li>Nix provides natural user space package management.</li>
-    <li>Nix can often be integrated iteratively with no adverse
-      effects on current operations.</li>
-    <li>Effective usage can lead to significant operational advantages
-      in many environments.</li>
-    <li>Nix can serve as, at least in part, as a 'compatibility'
-      layer, especially on *nixes.</li>
-  </ul>
-
-  <h2>Cons</h2>
-  <ul class="p">
-    <li>The nix disto and nixpkgs in particular are still somewhat
-      unstable and may be too immature for enterprise
-      systems.<span data-detail="detailed"> Be prepared to mess around
-      with derivative systems as the core distro moves. While this can
-      be overcome by extending and overriding, that's a pain.</span>
-    </li>
-    <li>For this reason, it's often the case that you end up using nix
-      with another distro / packagemanager, and thus deepen the stack.
-  </ul>
 </section>
-<ol class="breadcrumb">
-  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-  <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
-  <li class="active">Nix in Context</li>
-</ol>
+<nav>
+  <ol class="breadcrumb">
+    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+    <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
+    <li class="active">Nix in Context</li>
+  </ol>
+</nav>

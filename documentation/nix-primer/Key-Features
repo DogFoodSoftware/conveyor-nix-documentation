@@ -6,6 +6,13 @@
 <div data-default-section-audience="sysadmin sysengineer"
      class="page-header">Key Features</div>
 <section data-audience="all" id="Overview">
+
+
+	<h2>Dependency hell becomes a non-issue.</h2>
+	<ul>
+	  <li>Natuarlly handles multiple and incompatible version
+	  combinations.</li>
+
   <div class="p">
     Here we discuss some of the key features, as we see them of
     nix. The primary point of view is that of a system administrator

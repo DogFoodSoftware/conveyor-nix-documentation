@@ -26,9 +26,8 @@
 	A high level look at how nix fits in the stack.
       </li>
       <li>
-	<em><a href="/documentation/nix-primer/Micro-Distributions">Micro-Distributions</a></em>:
-	Walk through the "how" of building a simple
-	'micro-distribution' to better understand the "why" of nix.
+	<em><a href="/documentation/nix-primer/Use-Cases">Use Cases</a></em>:
+	How and why use nix?
       </li>
       <li>
         <em><a href="/documentation/nix-primer/Key-Features">Key
