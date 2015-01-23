@@ -22,6 +22,11 @@
   <div class="p">
     <ul>
       <li>
+	<em><a href="/documentation/nix-primer/Gotchas-and-Oddities">Gotchas
+	and Oddities</a></em>: Despite the overall elegance, the nix
+	language has it's warts.
+      </li>
+      <li>
 	<em><a href="/documentation/nix-primer/Nix-in-Context">Nix in Context</a></em>:
 	A high level look at how nix fits in the stack.
       </li>
@@ -30,19 +35,9 @@
 	How and why use nix?
       </li>
       <li>
-        <em><a href="/documentation/nix-primer/Key-Features">Key
-	Features</a></em>: A quick demonstration of the key features
-	of the nix package management system.
-      </li>
-      <li>
 	<em><a href="/documentation/nix-primer/Building-Packages">Building
 	Packages</a></em>: Walk through using nix-expressions to build
 	packages.
-      </li>
-      <li>
-	<em><a href="/documentation/nix-primer/Gotchas-and-Oddities">Gotchas
-	and Oddities</a></em>: Despite the overall elegance, the nix
-	language has it's warts.
       </li>
       <li>
 	<em><a href="/documentation/nix-primer/Development-Integeration">Development

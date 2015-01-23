@@ -1,0 +1,25 @@
+<ol class="breadcrumb">
+  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+  <li class="active">Nix Cookbook</li>
+</ol>
+<div class="page-header">Nix Cookbook</div>
+<section id="Overview">
+  <div class="p">
+    TODO
+  </div>
+</section>
+<section id="Recipes">
+  <h1>Recipes</h1>
+  <div class="p">
+    <ul>
+      <li>
+	<em><a href="/documentation/nix-cookbook/Optimal-Host-Repurposing">Optimal Host Repurposing</a></em>:
+	Meet dynamic host demands.
+      </li>
+    </ul>
+  </div>
+</section>
+<ol class="breadcrumb">
+  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
+  <li class="active">Nix Cookbook</li>
+</ol>
