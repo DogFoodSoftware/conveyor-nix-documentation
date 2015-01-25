@@ -1,8 +1,4 @@
-<ol class="breadcrumb">
-  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-  <li class="active">Nix Cookbook</li>
-</ol>
-<div class="page-header">Nix Cookbook</div>
+<!-- breadcrumb: (Stack-Reference)Stack Reference|Nix Cookbook -->
 <section id="Overview">
   <div class="p">
     TODO
@@ -19,7 +15,3 @@
     </ul>
   </div>
 </section>
-<ol class="breadcrumb">
-  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-  <li class="active">Nix Cookbook</li>
-</ol>

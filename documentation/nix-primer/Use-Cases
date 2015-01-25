@@ -1,12 +1,5 @@
-<nav>
-  <ol class="breadcrumb">
-    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-    <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
-    <li class="active">Use Cases</li>
-  </ol>
-</nav>
-<div class="page-header">Use Cases</div>
-<section id="Overview" style="height: 200px;">
+<!-- breadcrumb: (Stack-Reference)Stack Reference|(Nix-Primer)Nix Primer|Use Cases -->
+<section id="Overview">
   <div id="slides">
     <ul class="slides-container">
       <li>
@@ -59,7 +52,7 @@
 	  </ul>
 	</div>
       </li>
-      <li>
+      <li class="largest">
 	<h2>Organize micro-distributions.</h2>
 	<div class="p">
 	  Define 'distro' nix expression for a group of applications
@@ -91,10 +84,3 @@
     </nav>
   </div>
 </section>
-<nav>
-  <ol class="breadcrumb">
-    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-    <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
-    <li class="active">Use Cases</li>
-  </ol>
-</nav>

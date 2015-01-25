@@ -1,12 +1,5 @@
-<nav>
-  <ol class="breadcrumb">
-    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-    <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
-    <li class="active">Nix in Context</li>
-  </ol>
-</nav>
-<div class="page-header">Nix in Context</div>
-<section id="Overview">
+<!-- breadcrumb: (Stack-Reference)Stack Reference|(Nix-Primer)Nix Primer|Nix in Context -->
+<section id="Overview" class="slides-section">
   <div id="slides">
     <ul class="slides-container">
       <li>
@@ -72,10 +65,3 @@
     </nav>
   </div>
 </section>
-<nav>
-  <ol class="breadcrumb">
-    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-    <li><a href="/documentation/Nix-Primer">Nix Primer</a></li>
-    <li class="active">Nix in Context</li>
-  </ol>
-</nav>

@@ -1,10 +1,4 @@
-<nav>
-  <ol class="breadcrumb">
-    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-    <li class="active">Nix Primer</li>
-  </ol>
-</nav>
-<div class="page-header">Nix Primer</div>
+<!-- breadcrumb: (Stack-Reference)Stack Reference|Nix Primer -->
 <section id="Overview">
   <div class="p">
     Nix is a relatively lightweight, portable, and elegant package
@@ -48,9 +42,3 @@
     </ul>
   </div>
 </section>
-<nav>
-  <ol class="breadcrumb">
-    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-    <li class="active">Nix Primer</li>
-  </ol>
-</nav>

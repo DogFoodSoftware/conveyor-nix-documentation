@@ -1,11 +1,4 @@
-<nav>
-  <ol class="breadcrumb">
-    <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-    <li><a href="/documentation/Nix-Cookbook">Nix Cookbook</a></li>
-    <li class="active">Optimal Host Repurposing</li>
-  </ol>
-</nav>
-<div class="page-header">Optimal Host Repurposing</div>
+<!-- breadcrumb: (Stack-Reference)Stack Reference|(Nix-Primer)Nix Primer|Optimal Host Repurposing -->
 <section id="Scenario">
   <h1>Scenario</h1>
   <div class="p">
@@ -67,8 +60,3 @@
     otherwise be handled by the provisioning systems proper.</span>
   </div>
 </section>
-<ol class="breadcrumb">
-  <li><a href="/documentation/Stack-Reference">Stack Reference</a></li>
-  <li><a href="/documentation/Nix-Primer">Nix Cookbook</a></li>
-  <li class="active">Optimal Host Repuprosing</li>
-</ol>
