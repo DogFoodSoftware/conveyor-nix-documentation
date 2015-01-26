@@ -18,26 +18,29 @@
   <div class="p">
     <ul>
       <li>
-	<em><a href="/documentation/nix-primer/Nix-in-Context">Nix in Context</a></em>:
+	<a href="/documentation/nix-primer/Nix-in-Context">Nix in Context</a>:
 	A high level look at how nix fits in the stack.
       </li>
       <li>
-	<em><a href="/documentation/nix-primer/Use-Cases">Use Cases</a></em>:
+	<a href="/documentation/nix-primer/Use-Cases">Use Cases</a>:
 	How and why use nix?
       </li>
       <li>
-	<em><a href="/documentation/nix-primer/Building-Packages">Building
-	Packages</a></em>: Walk through using nix-expressions to build
-	packages.
+	<a href="/documentaiton/nix-primer/Concepts-and-Terminology">Concepts
+	and Terminology</a>: what are we talking about here?
       </li>
       <li>
-	<em><a href="/documentation/nix-primer/Basic-Admin">Basic
-	Admin</a></em>: Run through basic nix administration.
+	<a href="/documentation/nix-primer/Creating-Packages">Creating
+	Packages</a>: Get started in six slides.
       </li>
       <li>
-	<em><a href="/documentation/nix-primer/Development-Integeration">Development
-	Integration</a></em>: Patterns to integrate nix with
-	development.
+	<a href="/documentation/nix-primer/Basic-Admin">Basic
+	Admin</a>: Run through basic nix administration.
+      </li>
+      <li>
+	<a href="/documentation/nix-primer/Development-Integeration">Development
+	Integration</a>: Making nix packages development aware to
+	unify production and development.
       </li>
     </ul>
   </div>
