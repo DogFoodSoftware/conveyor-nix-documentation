@@ -10,6 +10,7 @@
 	  <li>Building a package creates a derivation.</li>
 	  <li>A derivation is absolutely static and immutable. Or at
 	    least it should be.</li>
+	  <li>In a word, nix is a derivations factory.</li>
 	</ul>
       </li>
       <li>
@@ -19,6 +20,9 @@
 	    derivations at a particular point in time.</li>
 	  <li>Any change to package specification or any input yields
 	    unique derivations upon build.</li>
+	  <li>For a given set of build inputs and a particular package
+	    specification, a build should be dependently
+	    repeatable.</li>
 	</ul>
       </li>
       <li class="largest">
@@ -59,7 +63,9 @@
       <li>
 	<h2>Intend to distribute.</h2>
 	<ul class="p">
-	  <li>Roughly speaking, </li>
+	  <li>You can think of a distribution as the history of set of
+	    ostensibly coherent package specifications.</li>
+	  <li>Since nix doesn't care anything about how an application is built, it's easy to integrate with existing application and deployment.
 	</ul>
       </li>
     </ul>
