@@ -1,4 +1,4 @@
-<!-- breadcrumb: (Stack-Reference)Stack Reference|(Nix-Primer)Nix Primer|Building Packages -->
+<!-- breadcrumb: (Stack-Reference)Stack Reference|(Nix-Primer)Nix Primer|Concepts and Terminology -->
 <section id="Overview">
   <div id="slides">
     <ul class="slides-container">
@@ -7,20 +7,27 @@
 	<ul class="p">
 	  <li>A derivation is your built package.</li>
 	  <li>We build by creating a derivation.</li>
-	  <li>Nix expressions are primarily about defining and naming
-	    derivations.</li>
+	  <li>A derivation is absolutely static and immutable. Or at
+	    least it should be.</li>
 	</ul>
       </li>
       <li>
-	<h2>Where's the package?</h2>
+	<h2>Package delivery guaranteed.</h2>
 	<ul class="p">
-	  <li></li>
+	  <li>A package defines how to create a derivation at a
+	    particular point in time.</li>
+	  <li>Packages are n
 	  <li>The nix experession and build files are essentially the
 	    nix package.</li>
 	  <li>Unlike other packages, the source is not generally
 	    distributed with the package, but is rather an input
 	    retrieved based on the nix expression.</li>
 	</ul>
+      </li>
+      <li>
+	<h2>Intend to distribute.</h2>
+	<ul class="p">
+	  <li>Roughly speaking, 
       </li>
       <!-- I really want to do do:
 
