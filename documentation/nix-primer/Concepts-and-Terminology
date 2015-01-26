@@ -35,14 +35,6 @@
 	    <li>Each version yields an entirely distinct derivation.</li>
 	    <li>Nix only really cares about 'versions' as part of the
 	      package name.</li>
-	    <li>Conventionally, unless multiple versions are needed,
-	      there is a single 'default.nix' expression
-	      per-package.</li>
-	    <li>Multiple versions are stored
-	      like <code>~/3.3.6.nix</code>
-	      or <code>~/3.3.6/default.nix</code>; the latter useful
-	      when there are auxiliary files specific to that
-	      version.</li>
 	    <li>Nix selects the highest version available when none
 	      specified.</li>
 	  </ul>
@@ -63,11 +55,14 @@
       <li>
 	<h2>A distribution is just a list.</h2>
 	<ul class="p">
-	  <li>A distribitution is just a list (nix set actually) of
-	    package names matched to an identically named directories
-	    containing the nix expressions and auxilliary files.</li>
+	  <li>A distribitution is just a list of package names
+	    conventionally matched to an identically named directory
+	    containing nix expressions and auxilliary files.</li>
 	  <li>Each version of the specification should correspond to a
 	    specific set of derivations.</li>
+	  <li>Generally, the actual source is not included in the
+	    package, but recieved. So even large system distributions
+	    aren't very large bit-wise.</li>
 	</ul>
       </li>
     </ul>

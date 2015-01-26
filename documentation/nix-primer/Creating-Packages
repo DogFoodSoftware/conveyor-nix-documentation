@@ -7,96 +7,66 @@
 	<ul class="p">
 	  <li>A package begins with a directory. The directory name is
 	    conventionally the package name.</li>
-	  <li>A single nix expression in a '.nix' file is defined for
-	    each version.</li>
-	  <li>Unlike other packages, the source is not generally
-	    distributed with the package spec, but is rather an input
-	    retrieved based on the nix expression.</li>
-	</ul>
+	  <li>Conventionally, unless multiple versions are needed,
+	    there is a single 'default.nix' expression
+	    per-package.</li>
+	  <li>Multiple versions are stored
+	    like <code>~/3.3.6.nix</code>
+	    or <code>~/3.3.6/default.nix</code>; the latter useful
+	    when there are auxiliary files specific to that
+	    version.</li>
 	</ul>
       </li>
       <li>
-	<h2>Package delivery guaranteed.</h2>
+	<h2>Expressions 101</h2>
 	<ul class="p">
-	  <li>A package defines how to create one or more version
-	    derivations at a particular point in time.</li>
-	  <li>Any change to package specification or any input yields
-	    unique derivations upon build.</li>
-	  <li>Packages are 
+	  <li>The expressions themselves are largely functions like:
+	    <pre><code>
+{ stdenv, fetchurl, gcc, zlib }:
 
-—project source or third party component—creates a 
-
-
-	  <li>We don't consider packages themselves to be versioned, thoug
-
-	  <li>Packages are n
-	  <li>The nix experession and build files are essentially the
-	    nix package.</li>
-	  <li>Unlike other packages, the source is not generally
-	    distributed with the package, but is rather an input
-	    retrieved based on the nix expression.</li>
+stdenv.mkDerivation rec {
+   ...
+}
+	    </code></pre></li>
+	  <li>When invoked, the function expects a set containing
+	    exactly the fields named before the '<code>:</code>'.</li>
+	  <li>Those are the package names of the build inputs needed
+	    to evualate the expression and create a derivation.</li>
+	  <li>After the '<code>:</code>' is the function body.</li>
 	</ul>
       </li>
       <li>
-	<h2>Intend to distribute.</h2>
+	<h2>Expressions 101 (cont.)</h2>
+	<div class="p">
+	  Don't get caught up in these technicalities, though. For actual usage:
+	  <ul>
+	    <li>'<code>{ stdenv, fetchurl, gcc, zlib }</code>' is
+	      this packages lits of dependencies.</li>
+	    <li>'<code>stdenv.mkDerivation rec { ... }</code>' defines your
+		package spec.</li>
+	    <li>The package spec is itself a set of attributes
+	      processed by the '<code>mkDerivation</code>' function to
+	      create the derivation on disk.</li>
+	  </ul>
+	</div>
+      </li>
+      <li>
+	<h2>The builder:</h2>
 	<ul class="p">
-	  <li>Roughly speaking, 
-      </li>
-      <!-- I really want to do do:
-
-	   <li id="Agument-build-systems">
-
-	   It kind of works and you can even link to it and it'll show
-	   up, but it messes up the 'next' arrow behavior for some
-	   reason. -->
-      <li>
-	<h2>Augment build systems.</h2>
-	<div class="p">
-	  For build processes built around use make, rake, ant or similar:
-	  <ul>
-	    <li>Nix is all about assembling third-party and internal
-	      dependencies.</li>
-	    <li>Can integrate local code changes. E.g., take directory
-	      or distribution tar ball as package source.</li>
-	  </ul>
-	</div>
-      </li>
-      <li>
-	<h2>Speed builds.</h2>
-	<div class="p">
-	  For build systems, such as Jenkins and Bamboo:
-	  <ul>
-	    <li>Building multiple versions, such as development, test,
-	      and production, may require blowing away and rebuilding
-	      different dependency versions or packaging all
-	      dependencies into each playground.</li>
-	    <li>Because nix manages multiple versions, you can retain
-	      different dependencies for all your branches on one host
-	      and only ever need rebuild the changed code and it's
-	      dependencies while still sharing everything sharable.</li>
-	  </ul>
-	</div>
-      </li>
-      <li class="largest">
-	<h2>Organize micro-distributions.</h2>
-	<div class="p">
-	  Define 'distro' nix expression for a group of applications
-	  and their stack.
-
-	  Define 'distro' nix expression for a group of applications
-	  and their stack.
-	  Define 'distro' nix expression for a group of applications
-	  and their stack.
-	  Define 'distro' nix expression for a group of applications
-	  and their stack.
-
-	  <ul>
-	    <li>Easily provision hosts and workstations.</li>
-	    <li>Clearly defines both product and supported stack
-	      elements.</li>
-	    <li>In some cases, is useful in product distribution.</li>
-	  </ul>
-	</div>
+	  <li>The actual install itself is conventionally handled by a bash script.</li>
+	  <li>If no builder is specified; a generic unix '<code>make /
+	      make install</code>' builder is invoked.</li>
+	  <li>The build script may be embedded in a string
+	    interprolated string literal in the nix expression.</li>
+	  <li>An external bash script may be specified.</li>
+	  <li>Regardless of the source, the builder is invoked in a
+	    'nix shell'. The shell environment provides access to the
+	    named build inputs <em>and nothing else</em>. Certain magic
+	    environment variables are set.</li>
+	  <li>The builder itself can do anything, so long as the
+	    builder plays nice and doesn't break out of the nix
+	    environment.</li>
+	</ul>
       </li>
     </ul>
     <nav class="slides-navigation">
