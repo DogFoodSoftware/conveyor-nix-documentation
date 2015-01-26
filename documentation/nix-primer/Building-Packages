@@ -1,0 +1,91 @@
+<!-- breadcrumb: (Stack-Reference)Stack Reference|(Nix-Primer)Nix Primer|Building Packages -->
+<section id="Overview">
+  <div id="slides">
+    <ul class="slides-container">
+      <li>
+	<h2>It's all about derivations.</h2>
+	<ul class="p">
+	  <li>A derivation is your built package.</li>
+	  <li>We build by creating a derivation.</li>
+	  <li>Nix expressions are primarily about defining and naming
+	    derivations.</li>
+	</ul>
+      </li>
+      <li>
+	<h2>Where's the package?</h2>
+	<ul class="p">
+	  <li></li>
+	  <li>The nix experession and build files are essentially the
+	    nix package.</li>
+	  <li>Unlike other packages, the source is not generally
+	    distributed with the package, but is rather an input
+	    retrieved based on the nix expression.</li>
+	</ul>
+      </li>
+      <!-- I really want to do do:
+
+	   <li id="Agument-build-systems">
+
+	   It kind of works and you can even link to it and it'll show
+	   up, but it messes up the 'next' arrow behavior for some
+	   reason. -->
+      <li>
+	<h2>Augment build systems.</h2>
+	<div class="p">
+	  For build processes built around use make, rake, ant or similar:
+	  <ul>
+	    <li>Nix is all about assembling third-party and internal
+	      dependencies.</li>
+	    <li>Can integrate local code changes. E.g., take directory
+	      or distribution tar ball as package source.</li>
+	  </ul>
+	</div>
+      </li>
+      <li>
+	<h2>Speed builds.</h2>
+	<div class="p">
+	  For build systems, such as Jenkins and Bamboo:
+	  <ul>
+	    <li>Building multiple versions, such as development, test,
+	      and production, may require blowing away and rebuilding
+	      different dependency versions or packaging all
+	      dependencies into each playground.</li>
+	    <li>Because nix manages multiple versions, you can retain
+	      different dependencies for all your branches on one host
+	      and only ever need rebuild the changed code and it's
+	      dependencies while still sharing everything sharable.</li>
+	  </ul>
+	</div>
+      </li>
+      <li class="largest">
+	<h2>Organize micro-distributions.</h2>
+	<div class="p">
+	  Define 'distro' nix expression for a group of applications
+	  and their stack.
+
+	  Define 'distro' nix expression for a group of applications
+	  and their stack.
+	  Define 'distro' nix expression for a group of applications
+	  and their stack.
+	  Define 'distro' nix expression for a group of applications
+	  and their stack.
+
+	  <ul>
+	    <li>Easily provision hosts and workstations.</li>
+	    <li>Clearly defines both product and supported stack
+	      elements.</li>
+	    <li>In some cases, is useful in product distribution.</li>
+	  </ul>
+	</div>
+      </li>
+    </ul>
+    <nav class="slides-navigation">
+      <a href="#" class="next">
+        <i class="bi-icon bi-icon-chevron-right"></i>
+      </a>
+      <a href="#" class="prev">
+        <i class="bi-icon bi-icon-chevron-left"></i>
+      </a>
+    </nav>
+  </div>
+</section>
