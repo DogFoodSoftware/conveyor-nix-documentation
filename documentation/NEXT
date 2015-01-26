@@ -1,0 +1,5 @@
+- If you've installed a package, and there is a change to the
+  derivation, but not the version, does an upgrade replace your
+  install? (Specifically verify, but an install does for sure.) If I
+  understand how everything works, it should. We have to assume that
+  change == newer / preferred.
