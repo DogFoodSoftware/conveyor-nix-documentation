@@ -61,11 +61,13 @@
 	</ul>
       </li>
       <li>
-	<h2>Intend to distribute.</h2>
+	<h2>A distribution is just a list.</h2>
 	<ul class="p">
-	  <li>You can think of a distribution as the history of set of
-	    ostensibly coherent package specifications.</li>
-	  <li>Since nix doesn't care anything about how an application is built, it's easy to integrate with existing application and deployment.
+	  <li>A distribitution is just a list (nix set actually) of
+	    package names matched to an identically named directories
+	    containing the nix expressions and auxilliary files.</li>
+	  <li>Each version of the specification should correspond to a
+	    specific set of derivations.</li>
 	</ul>
       </li>
     </ul>
