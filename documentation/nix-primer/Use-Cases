@@ -3,6 +3,20 @@
   <div id="slides">
     <ul class="slides-container">
       <li>
+	<h2>A-B testing.</h2>
+	<ul>
+	  <li>Since nix "installation" is per-user, it retains
+	    everything ever installed until cleaned.</li>
+	  <li>Switching between these cached installations is
+	    trivial.</li>
+	  <li>For (non-statically linked) stack components, this makes
+	    manual A-B testing quick.</li>
+	  <li>E.g., install various java implementations, browser
+	    versions, or whatever and quickly swap one for the other to
+	    test effect.</li>
+	</ul>
+      </li>
+      <li>
 	<h2>Provision hosts.</h2>
 	<div class="p">
 	  Nix isn't a provisioner, but it is an excellent tool for
