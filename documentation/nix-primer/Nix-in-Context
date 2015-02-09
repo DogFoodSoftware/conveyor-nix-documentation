@@ -14,14 +14,10 @@
 	<h2>The bad parts.</h2>
 	<ul>
 	  <li>The nix disto and nixpkgs in particular are still
-	    somewhat unstable and immature compared to some distros.</li>
-	  <li>I've noticed significant behavior changes regularly
-	    every 3 months since I started using it myself, about 9
-	    months ago.</li>
-	  <li>The nix language is theoretically elegant, but it's
-	    packaged like a math equation. Unless that's already your
-	    mode of thought, be prepared to spend a little time wrapping
-	    your head around things.</li>
+	    somewhat unstable and immature (@ February 2015).</li>
+	  <li>Nix specifies packages as math equations. Be prepared to spend a
+	    little time wrapping your head around things.</li>
+	  <li>The nix language syntax is a bit of a hodge-podge.</li>
 	</ul>
       </li>
       <li>
