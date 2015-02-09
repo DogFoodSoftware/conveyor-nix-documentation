@@ -5,29 +5,18 @@
       <li>
 	<h2>It's all about derivations.</h2>
 	<ul class="p">
-	  <li>The installed host system / runtime is a set of
-	    derivations (plus any extra-nix stuff).</li>
-	  <li>Building a package creates a derivation.</li>
-	  <li>A derivation is absolutely static and immutable. Or at
-	    least it should be.</li>
+	  <li>Installing a package builds a derivation.</li>
+	  <li>A derivation is absolutely static and immutable. (Or at least it
+	    should be.)</li>
 	  <li>In a word, nix is a derivations factory.</li>
-	</ul>
-      </li>
-      <li>
-	<h2>Package delivery guaranteed.</h2>
-	<ul class="p">
-	  <li>A package defines how to create one or more version
-	    derivations at a particular point in time.</li>
-	  <li>Any change to package specification or any input yields
-	    unique derivations upon build.</li>
-	  <li>For a given set of build inputs and a particular package
-	    specification, a build should be dependently
-	    repeatable.</li>
 	</ul>
       </li>
       <li class="largest">
 	<h2>Nix doesn't care about versions&#8230;</h2>
 	<div class="p">
+	  TOOD: check, but I think a 'package' refers to each version. So
+	  ~/foo/1.2.nix and ~/foo/1.3.nix are two different packages.
+
 	  Nix doesn't care about versions, but you do. So nix tries to
 	  accomodate.
 	  <ul>
@@ -41,7 +30,17 @@
 	</div>
       </li>
       <li>
-	<h2>Don't trust versions.</h2>
+	<h2>Package delivery guaranteed.</h2>
+	<ul class="p">
+	  <li>Any functional change to a version specification or any input /
+	    dependency yields a unique derivations.</li>
+	  <li>For a given set of build inputs and a particular version
+	    specification, a build should be dependently
+	    repeatable.</li>
+	</ul>
+      </li>
+      <li>
+	<h2>Don't trust versions too far.</h2>
 	<ul class="p">
 	  <li>You can't rely on two derivations of the same package
 	    version to be identical based soley on the version.</li>
@@ -53,16 +52,12 @@
 	</ul>
       </li>
       <li>
-	<h2>A distribution is just a list.</h2>
+	<h2>A distribution is a set of packages.</h2>
 	<ul class="p">
-	  <li>A distribitution is just a list of package names
-	    conventionally matched to an identically named directory
-	    containing nix expressions and auxilliary files.</li>
-	  <li>Each version of the specification should correspond to a
-	    specific set of derivations.</li>
-	  <li>Generally, the actual source is not included in the
-	    package, but recieved. So even large system distributions
-	    aren't very large bit-wise.</li>
+	  <li>A distribitution is just a set of package specifications.</li>
+	  <li>Source is typically retrieved by the package specification, not
+	    retrieved. So even large distributions aren't very large
+	    bit-wise.</li>
 	</ul>
       </li>
     </ul>

@@ -6,10 +6,9 @@
 	<h2>Layout and bits.</h2>
 	<ul class="p">
 	  <li>A package begins with a directory. The directory name is
-	    conventionally the package name.</li>
+	    conventionally the (versionless) package name.</li>
 	  <li>Conventionally, unless multiple versions are needed,
-	    there is a single 'default.nix' expression
-	    per-package.</li>
+	    there is a single 'default.nix' expression.</li>
 	  <li>Multiple versions are stored
 	    like <code>~/3.3.6.nix</code>
 	    or <code>~/3.3.6/default.nix</code>; the latter useful
@@ -20,7 +19,7 @@
       <li>
 	<h2>Expressions 101</h2>
 	<ul class="p">
-	  <li>The expressions themselves are largely functions like:
+	  <li>The expressions themselves are functions like:
 	    <pre><code>
 { stdenv, fetchurl, gcc, zlib }:
 
@@ -30,8 +29,8 @@ stdenv.mkDerivation rec {
 	    </code></pre></li>
 	  <li>When invoked, the function expects a set containing
 	    exactly the fields named before the '<code>:</code>'.</li>
-	  <li>Those are the package names of the build inputs needed
-	    to evualate the expression and create a derivation.</li>
+	  <li>Those are conventionall the package names of the build inputs
+	    needed to evualate the expression and create a derivation.</li>
 	  <li>After the '<code>:</code>' is the function body.</li>
 	</ul>
       </li>
@@ -50,7 +49,7 @@ stdenv.mkDerivation rec {
 	  </ul>
 	</div>
       </li>
-      <li>
+      <li class="largest">
 	<h2>The builder:</h2>
 	<ul class="p">
 	  <li>The actual install itself is conventionally handled by a bash script.</li>

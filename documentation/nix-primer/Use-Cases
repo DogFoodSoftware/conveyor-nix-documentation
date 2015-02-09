@@ -9,8 +9,8 @@
 	    everything ever installed until cleaned.</li>
 	  <li>Switching between these cached installations is
 	    trivial.</li>
-	  <li>For (non-statically linked) stack components, this makes
-	    manual A-B testing quick.</li>
+	  <li>Under the right conditions this makes manual A-B testing
+	    quick.</li>
 	  <li>E.g., install various java implementations, browser
 	    versions, or whatever and quickly swap one for the other to
 	    test effect.</li>
@@ -41,16 +41,15 @@
       <li>
 	<h2>Augment build systems.</h2>
 	<div class="p">
-	  For build processes built around use make, rake, ant or similar:
+	  For build processes built around make, rake, ant or similar:
 	  <ul>
-	    <li>Nix is all about assembling third-party and internal
-	      dependencies.</li>
-	    <li>Can integrate local code changes. E.g., take directory
-	      or distribution tar ball as package source.</li>
+	    <li>Nix can provide simple and powerful depedency management.</li>
+	    <li>Can be setup to build from distributions or local checkouts;
+	      unifying development, test, and production builds.</li>
 	  </ul>
 	</div>
       </li>
-      <li>
+      <li class="largest">
 	<h2>Speed builds.</h2>
 	<div class="p">
 	  For build systems, such as Jenkins and Bamboo:
@@ -66,24 +65,15 @@
 	  </ul>
 	</div>
       </li>
-      <li class="largest">
+      <li>
 	<h2>Organize micro-distributions.</h2>
 	<div class="p">
 	  Define 'distro' nix expression for a group of applications
 	  and their stack.
-
-	  Define 'distro' nix expression for a group of applications
-	  and their stack.
-	  Define 'distro' nix expression for a group of applications
-	  and their stack.
-	  Define 'distro' nix expression for a group of applications
-	  and their stack.
-
 	  <ul>
 	    <li>Easily provision hosts and workstations.</li>
-	    <li>Clearly defines both product and supported stack
-	      elements.</li>
-	    <li>In some cases, is useful in product distribution.</li>
+	    <li>Clearly defines both product and stack elements.</li>
+	    <li>In some cases, is useful in public product distribution.</li>
 	  </ul>
 	</div>
       </li>
