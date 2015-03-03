@@ -29,21 +29,6 @@
 	</ul>
       </li>
       <li class="largest">
-	<h2>Can handle development dependencies.</h2>
-	<ul class="p">
-	  <li>Nix makes a great dependency manager.</li>
-	  <li>Nix can often improve and simplify dependency management
-	    functions in project build tools like Maven, Jenkins and
-	    Gradle.</li>
-	  <li>Nix can provide simple and robust dependency management
-	    for 'pure' build systems like
-	    make. See <a href="/documentation/nix-primer/Use-Cases#Augment-Build-Systems">augmenting
-	    build systems</a>.</li>
-	  <li>Nix can elegantly integrate the development build and
-	    production setup.</li>
-	</ul>
-      </li>
-      <li>
 	<h2>May improve public distribution.</h2>
 	<ul class="p">
 	  <li>Nix channels provide a relatively convenient method of

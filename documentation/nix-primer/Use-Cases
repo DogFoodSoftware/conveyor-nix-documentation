@@ -5,15 +5,11 @@
       <li>
 	<h2>A-B testing.</h2>
 	<ul>
-	  <li>Since nix "installation" is per-user, it retains
-	    everything ever installed until cleaned.</li>
-	  <li>Switching between these cached installations is
-	    trivial.</li>
-	  <li>Under the right conditions this makes manual A-B testing
-	    quick.</li>
-	  <li>E.g., install various java implementations, browser
-	    versions, or whatever and quickly swap one for the other to
-	    test effect.</li>
+	  <li>One created, every generation of a nix environment is cached
+	    until removed.</li>
+	  <li>You can trivially switch between each generation.</li>
+	  <li>The environments will share everything that is shareable and run
+	    on the same host, minimizing your test variables.</li>
 	</ul>
       </li>
       <li>

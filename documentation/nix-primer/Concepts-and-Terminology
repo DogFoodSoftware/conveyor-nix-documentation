@@ -14,20 +14,29 @@
       <li class="largest">
 	<h2>Nix doesn't care about versions&#8230;</h2>
 	<div class="p">
-	  TOOD: check, but I think a 'package' refers to each version. So
-	  ~/foo/1.2.nix and ~/foo/1.3.nix are two different packages.
-
 	  Nix doesn't care about versions, but you do. So nix tries to
 	  accomodate.
 	  <ul>
-	    <li>A package may provide one or more versions.</li>
-	    <li>Each version yields an entirely distinct derivation.</li>
-	    <li>Nix only really cares about 'versions' as part of the
-	      package name.</li>
-	    <li>Nix selects the highest version available when none
-	      specified.</li>
+	    <li>Nix does not use the concopt of 'versions' internally.</li>
+	    <li>It does however support naming conventions that allow users to
+	      refer to versions.</li>
+	    <li>Nix package names include the version.</li>
+	    <li>'<code>foo</code>' becomes '<code>foo-&lt;highest
+	    version&gt;</code>'; e.g., with '<code>gcc-3.8</code>' and
+	    '<code>gcc-4.8</code>', '<code>gcc</code>' &lt;=&gt;
+	    '<code>gcc-4.8</code>'.</li>
 	  </ul>
 	</div>
+      </li>
+      <li>
+	<h2>.. so don't trust versions too far.</h2>
+	<ul class="p">
+	  <li>Changing the package spec or build inputs changes the
+	    derivation.</li>
+	  <li>The derivation is a result of the current system; the advertised
+	    package version is really just talking about the
+	    '<code>src</code>' input.</li>
+	</ul>
       </li>
       <li>
 	<h2>Package delivery guaranteed.</h2>
@@ -37,18 +46,6 @@
 	  <li>For a given set of build inputs and a particular version
 	    specification, a build should be dependently
 	    repeatable.</li>
-	</ul>
-      </li>
-      <li>
-	<h2>Don't trust versions too far.</h2>
-	<ul class="p">
-	  <li>You can't rely on two derivations of the same package
-	    version to be identical based soley on the version.</li>
-	  <li>Recall that changing the package spec changes the
-	    derivation.</li>
-	  <li>It's ultimately the derivation where the rubber hits the
-	    road. Packages and versions are merely the human-friendly
-	    concepts we use to get there.</li>
 	</ul>
       </li>
       <li>
