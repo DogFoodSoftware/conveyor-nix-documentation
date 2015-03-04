@@ -2,16 +2,55 @@
 <section id="Overview">
   <div id="slides">
     <ul class="slides-container">
-      <li>
+      <li class="largest">
 	<h2>Managing installed packages.</h2>
 	<ul class="p">
-	  <li></li>
+	  <li><code>nix-env -f $ROOT_EXP -iA foo</code>: installs the
+	   most <em>highest version or changed</em> version of 'foo' and all.
+	   dependencies.</li>
+	  <li><code>nix-env -f $ROOT_EXP -i foo-1.0</code>: installs a the
+	    specific 1.0 version of 'foo'.</li>
+	  <li>Note '<code>-iA</code>' installs by trying to match the
+	    attribute name tied tied to the package
+	    expression. <code>-i</code> installs based on the names of the
+	    evaluated expressions.</li>
+	  <li><code>nix-env -f $ROOT_EXP -u foo</code>: upgrades existing
+	    'foo', if any.</li>
+	  <li><code>nix-env -f $ROOT_EXP -u '*'</code>: upgrades
+	    everything.</li>
+	  <li><code>nix-env -e $ROOT_EXP -e foo</code>: un-installs
+	    'foo'. I.e., removes 'foo' for the current environment, <em>but
+	      leaves it in the store</em>.</li>
+	</ul>
+      </li>
+      <li>
+	<h2>Managing your environment.</h2>
+	<ul class="p">
+	  <li><code>nix-env -i</code>, <code>-u</code>, and <code>-e</code>
+	   add, update, and remove packages from the enironment.</li>
+	  <li><code>nix-env --rollback</code>: reverts the current enviornment
+	    to the previous generation.</li>
+	  <li><code>nix-env --list-generations</code>
+	    and <code>--switch-generations</code> list and select the
+	    generations.</li>
+	  <li><code>nix-env --delete-generations [old|&lt;#&gt;|&lt;time
+	      per.&gtg]</code>: deletes the specified envirenmont
+	      generations.</li>
+	  <li><code>ln -s `readlink -f ~/.nix-profile`
+	      /nix/var/nix/profiles/savepoint</code>: creates a named profile,
+	      which you can access with <code>nix-env --switch-profile
+	      &lt;profile&gt;</code></li>
 	</ul>
       </li>
       <li>
 	<h2>Managing the store.</h2>
 	<ul class="p">
-	  <li></li>
+	  <li><code>nix-store --gc</code>: cleans out derivations not needed
+	    by any environment.</li>
+	  <li>To free all <em>currently</em> unused space, you would do:<br />
+	    <code>nix-env --delete-generations old; nix-store --gc</code></li>
+	  <li><code>nix-store --gc --max-freed $((100 * 1024 * 1024))</code>:
+	  stops after freeing at least 100MB.</li>
 	</ul>
       </li>
       <li>

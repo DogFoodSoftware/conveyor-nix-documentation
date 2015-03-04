@@ -12,21 +12,6 @@
 	    on the same host, minimizing your test variables.</li>
 	</ul>
       </li>
-      <li>
-	<h2>Provision hosts.</h2>
-	<div class="p">
-	  Nix isn't a provisioner, but it is an excellent tool for
-	  setting up software.
-	  <ul>
-	    <li>Nix expressions define the package set.</li>
-	    <li>Can easily include or hook into configuration as
-	      packages.</li>
-	    <li>Nix's dependency isolation allows the same host to be
-	      provisioned for multiple purposes, even when components
-	      conflict.</li>
-	  </ul>
-	</div>
-      </li>
       <!-- I really want to do do:
 
 	   <li id="Agument-build-systems">
@@ -37,27 +22,14 @@
       <li>
 	<h2>Augment build systems.</h2>
 	<div class="p">
-	  For build processes built around make, rake, ant or similar:
 	  <ul>
-	    <li>Nix can provide simple and powerful depedency management.</li>
-	    <li>Can be setup to build from distributions or local checkouts;
-	      unifying development, test, and production builds.</li>
-	  </ul>
-	</div>
-      </li>
-      <li class="largest">
-	<h2>Speed builds.</h2>
-	<div class="p">
-	  For build systems, such as Jenkins and Bamboo:
-	  <ul>
-	    <li>Building multiple versions, such as development, test,
-	      and production, may require blowing away and rebuilding
-	      different dependency versions or packaging all
-	      dependencies into each playground.</li>
-	    <li>Because nix manages multiple versions, you can retain
-	      different dependencies for all your branches on one host
-	      and only ever need rebuild the changed code and it's
-	      dependencies while still sharing everything sharable.</li>
+	    <li>Nix is an easy way to add technology agnostic dependency
+	      management.</li>
+	    <li>Can use same system to build from local development
+	      checkous.</li>
+	    <li>Integrates remote caching to speed up setting up the second
+	      and third builds.</li>
+	    <li>Can quickly rollbacak to previous environment states.</li>
 	  </ul>
 	</div>
       </li>
@@ -69,7 +41,8 @@
 	  <ul>
 	    <li>Easily provision hosts and workstations.</li>
 	    <li>Clearly defines both product and stack elements.</li>
-	    <li>In some cases, is useful in public product distribution.</li>
+	    <li>In some cases, is useful in public product distribution;
+	      especially with open source projects.</li>
 	  </ul>
 	</div>
       </li>

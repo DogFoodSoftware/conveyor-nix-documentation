@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   version = "1.0";
-  bare_name = "a";
+  bare_name = "deps-a";
   name = "${bare_name}-${version}";
 
   phases = [ "installPhase" ];

@@ -8,7 +8,11 @@
 	  <li>Installing a package builds a derivation.</li>
 	  <li>A derivation is absolutely static and immutable. (Or at least it
 	    should be.)</li>
-	  <li>In a word, nix is a derivations factory.</li>
+	  <li>Changing any attribute of a derivation expression, the source,
+	    the builder, configuration parameters, etc. will cause a new version
+	    to be built.</li>
+	  <li>Invoking a build with the same parameters should always generate
+	    identical results.</li>
 	</ul>
       </li>
       <li class="largest">
@@ -36,22 +40,15 @@
 	  <li>The derivation is a result of the current system; the advertised
 	    package version is really just talking about the
 	    '<code>src</code>' input.</li>
+	  <li>In practice, this is an issue for developers more than admins /
+	    users.</li>
 	</ul>
       </li>
       <li>
-	<h2>Package delivery guaranteed.</h2>
+	<h2>A distribution is a set of expressions.</h2>
 	<ul class="p">
-	  <li>Any functional change to a version specification or any input /
-	    dependency yields a unique derivations.</li>
-	  <li>For a given set of build inputs and a particular version
-	    specification, a build should be dependently
-	    repeatable.</li>
-	</ul>
-      </li>
-      <li>
-	<h2>A distribution is a set of packages.</h2>
-	<ul class="p">
-	  <li>A distribitution is just a set of package specifications.</li>
+	  <li>A distribitution is just a set of expresses defining package
+	    specifications.</li>
 	  <li>Source is typically retrieved by the package specification, not
 	    retrieved. So even large distributions aren't very large
 	    bit-wise.</li>

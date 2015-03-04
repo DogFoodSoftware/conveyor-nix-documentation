@@ -21,51 +21,70 @@
 	<ul class="p">
 	  <li>The expressions themselves are functions like:
 	    <pre><code>
-{ stdenv, fetchurl, gcc, zlib }:
+{ stdenv, bash }:
 
 stdenv.mkDerivation rec {
    ...
 }
-	    </code></pre></li>
-	  <li>When invoked, the function expects a set containing
-	    exactly the fields named before the '<code>:</code>'.</li>
-	  <li>Those are conventionall the package names of the build inputs
-	    needed to evualate the expression and create a derivation.</li>
-	  <li>After the '<code>:</code>' is the function body.</li>
+	    </code></pre>
+	  </li>
+	  <li>'<code>{ stdenv, bash }</code>' is
+	    this packages list of build dependencies.</li>
+	  <li>'<code>stdenv.mkDerivation rec { ... }</code>' defines your
+	    package spec.</li>
+	  <li>The package spec is itself a set of attributes
+	    processed by the '<code>mkDerivation</code>' function to
+	    create the derivation on disk.</li>
 	</ul>
-      </li>
-      <li>
-	<h2>Expressions 101 (cont.)</h2>
-	<div class="p">
-	  Don't get caught up in these technicalities, though. For actual usage:
-	  <ul>
-	    <li>'<code>{ stdenv, fetchurl, gcc, zlib }</code>' is
-	      this packages lits of dependencies.</li>
-	    <li>'<code>stdenv.mkDerivation rec { ... }</code>' defines your
-		package spec.</li>
-	    <li>The package spec is itself a set of attributes
-	      processed by the '<code>mkDerivation</code>' function to
-	      create the derivation on disk.</li>
-	  </ul>
-	</div>
       </li>
       <li class="largest">
-	<h2>The builder:</h2>
+	<h2>It's just a builder.</h2>
 	<ul class="p">
-	  <li>The actual install itself is conventionally handled by a bash script.</li>
-	  <li>If no builder is specified; a generic unix '<code>make /
-	      make install</code>' builder is invoked.</li>
-	  <li>The build script may be embedded in a string
-	    interprolated string literal in the nix expression.</li>
-	  <li>An external bash script may be specified.</li>
-	  <li>Regardless of the source, the builder is invoked in a
-	    'nix shell'. The shell environment provides access to the
-	    named build inputs <em>and nothing else</em>. Certain magic
-	    environment variables are set.</li>
-	  <li>The builder itself can do anything, so long as the
-	    builder plays nice and doesn't break out of the nix
-	    environment.</li>
+	  <li>This is all just nix's way of trying to find out how to build
+	    your package.</li>
+	  <li>May build with any tool; conventionally, it's usually a bash
+	    script that kicks things off.</li>
+	  <li>You can inline simple bash and then let
+	  '<code>mkDerivation</code>' know by setting the
+	  '<code>phases</code>':
+	    <pre><code>
+phases = [ "installPhase" ];
+buildInputs = [ bash ];
+installPhase = ''
+  mkdir -p $out/bin
+  cat <<EOF > $out/bin/hello_world
+#!/${bash}/bin/bash
+echo "Hello World!"
+EOF
+  chmod a+x $out/bin/hello_world
+'';
+	    </pre></code>
+	  </li>
 	</ul>
+      </li>
+      <li class="largest">
+	<h2>Putting it all together.</h2>
+	<div class="p">
+	  We add a name which is the name, and we get:
+	  <pre><code>
+{ stdenv, bash }:
+
+stdenv.mkDerivation rec {
+  name = "foo-1.0";
+
+  phases = [ "installPhase" ];
+  buildInputs = [ bash ];
+  installPhase = ''
+    mkdir -p $out/bin
+    cat <<EOF > $out/bin/hello_world
+#!/${bash}/bin/bash
+echo "Hello World!"
+EOF
+    chmod a+x $out/bin/hello_world
+  '';
+}
+	    </pre></code>
+	</div>
       </li>
     </ul>
     <nav class="slides-navigation">

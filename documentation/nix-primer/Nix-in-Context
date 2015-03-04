@@ -11,16 +11,6 @@
 	</ul>
       </li>
       <li>
-	<h2>The bad parts.</h2>
-	<ul>
-	  <li>The nix disto and nixpkgs in particular are still
-	    somewhat unstable and immature (@ February 2015).</li>
-	  <li>Nix specifies packages as math equations. Be prepared to spend a
-	    little time wrapping your head around things.</li>
-	  <li>The nix language syntax is a bit of a hodge-podge.</li>
-	</ul>
-      </li>
-      <li>
 	<h2>Nix works in user space.</h2>
 	<ul class="p">
 	  <li>Therefore, nix plays nice with other package managers.</li>
@@ -29,13 +19,13 @@
 	</ul>
       </li>
       <li class="largest">
-	<h2>May improve public distribution.</h2>
-	<ul class="p">
-	  <li>Nix channels provide a relatively convenient method of
-	    binary distribution.</li>
-	  <li>Of course, the overhead here is installing a nix base
-	    system, so it's only applicable to large applications.</li>
-	  <li>For more, see <a href="/documentation/nix-primer/Use-Cases#Micro-Distributions">micro-distribution use case.</a></li>
+	<h2>The bad parts.</h2>
+	<ul>
+	  <li>The nix disto and nixpkgs in particular are still
+	    somewhat unstable and immature (@ February 2015).</li>
+	  <li>Nix specifies packages as math equations. Be prepared to spend a
+	    little time wrapping your head around things.</li>
+	  <li>The nix language syntax is a bit of a hodge-podge.</li>
 	</ul>
       </li>
     </ul>

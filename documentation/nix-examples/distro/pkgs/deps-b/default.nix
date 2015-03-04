@@ -1,13 +1,13 @@
-{ stdenv, bash, a }:
+{ stdenv, bash, deps-a }:
 
 stdenv.mkDerivation rec {
   version = "1.0";
-  bare_name = "b-deps-a";
+  bare_name = "deps-b";
   name = "${bare_name}-${version}";
 
   phases = [ "installPhase" ];
 
-  buildInputs = [ bash a ];
+  buildInputs = [ bash deps-a ];
 
   installPhase = ''
     mkdir -p $out/bin
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
     cat <<EOF > $out/bin/b.sh
 #!${bash}/bin/bash
 
-source ${a}/lib/a.lib
+source ${deps-a}/lib/a.lib
 
 function hello_wrapper() {
   hello_world "B"
